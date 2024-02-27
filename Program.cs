@@ -1,4 +1,5 @@
-﻿//string billGates = "Praise the great leader... BILL GATES";
-var numberOfBillGates = 1;
-Console.WriteLine(numberOfBillGates);
-Console.WriteLine(numberOfBillGates);
+﻿string name = "teddy";
+
+long jeffBezosNetworth = 196000000000;
+
+var charchar = 'c';
