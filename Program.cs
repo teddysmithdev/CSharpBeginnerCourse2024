@@ -1,25 +1,23 @@
-﻿//Array CRUD
-
-//Create
-string[] favoriteRats = ["fancy rat", "brown rat", "radioactive rat", "wolf rat"];
-
-//Read
-//Console.WriteLine(favoriteRats);
-// foreach(var rat in favoriteRats) 
-// {
-//     Console.WriteLine(rat);
-// }
-
-//Update
-//favoriteRats[0] = "Fancy Rat";
-// LINQ - "update array linq"
-
-var newFavoriteRats = favoriteRats.Where((e) => e.StartsWith("b"));
-
-foreach(var rat in newFavoriteRats) 
+﻿//Counter
+for(var i = 1; i <= 10; i++)
 {
-    Console.WriteLine(rat);
+    Console.WriteLine(i);
 }
 
-//Delete
-//gimme
+string[] favoriteHairMetalBands = ["Van Halen", "Dokken", "Great White"];
+
+for(var i = 0; i < favoriteHairMetalBands.Length; i++)
+{
+    Console.WriteLine(favoriteHairMetalBands[i]);
+}
+
+foreach(var band in favoriteHairMetalBands)
+{
+    Console.WriteLine(band);
+}
+
+favoriteHairMetalBands.ToList().ForEach((i) => {
+    Console.WriteLine("ForEach: " + i);
+});
+
+Array.ForEach(favoriteHairMetalBands, e => Console.WriteLine("Array.ForEach: " + e));
