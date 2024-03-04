@@ -1,23 +1,39 @@
-﻿//Counter
-for(var i = 1; i <= 10; i++)
+﻿// if(true)
+// {
+//     Console.WriteLine("This is true");
+// }
+
+// var aquariumFish = "porcupine puffer fish";
+// var aquariumFish2 = "clown fish";
+
+// if(aquariumFish.ToLower() == "puffer fish")
+// {
+//     Console.WriteLine("Buy fish");
+// } 
+// else if(aquariumFish.ToLower() == "clown fish")
+// {
+//     Console.WriteLine("Buy fish");
+// }
+// else
+// {
+//     Console.WriteLine("Do not buy fish");
+// }
+
+
+var aquariumFish = "porcupine puffer fish";
+var fishTankPrice = 1000;
+
+if((aquariumFish == "porcupine puffer fish") && (aquariumFish == "clown fish"))
 {
-    Console.WriteLine(i);
+    Console.WriteLine("Buy fish");
 }
 
-string[] favoriteHairMetalBands = ["Van Halen", "Dokken", "Great White"];
-
-for(var i = 0; i < favoriteHairMetalBands.Length; i++)
+if(fishTankPrice <= 1000)
 {
-    Console.WriteLine(favoriteHairMetalBands[i]);
+    Console.WriteLine("Buy tank");
 }
 
-foreach(var band in favoriteHairMetalBands)
+if(aquariumFish is string)
 {
-    Console.WriteLine(band);
+    Console.WriteLine("aquariumFish is a string");
 }
-
-favoriteHairMetalBands.ToList().ForEach((i) => {
-    Console.WriteLine("ForEach: " + i);
-});
-
-Array.ForEach(favoriteHairMetalBands, e => Console.WriteLine("Array.ForEach: " + e));
