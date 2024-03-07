@@ -1,39 +1,26 @@
-﻿// if(true)
-// {
-//     Console.WriteLine("This is true");
-// }
+﻿var preHistoricFish = "Cockerellites";
 
-// var aquariumFish = "porcupine puffer fish";
-// var aquariumFish2 = "clown fish";
-
-// if(aquariumFish.ToLower() == "puffer fish")
-// {
-//     Console.WriteLine("Buy fish");
-// } 
-// else if(aquariumFish.ToLower() == "clown fish")
-// {
-//     Console.WriteLine("Buy fish");
-// }
-// else
-// {
-//     Console.WriteLine("Do not buy fish");
-// }
-
-
-var aquariumFish = "porcupine puffer fish";
-var fishTankPrice = 1000;
-
-if((aquariumFish == "porcupine puffer fish") && (aquariumFish == "clown fish"))
+switch (preHistoricFish) 
 {
-    Console.WriteLine("Buy fish");
+    case "Heliobatis":
+        Console.WriteLine("Heliobatis");
+        break;
+    case "Cockerellites":
+        Console.WriteLine("Cockerellites");
+        break;
+    default:
+        Console.WriteLine("This is a default");
+        break;
 }
 
-if(fishTankPrice <= 1000)
-{
-    Console.WriteLine("Buy tank");
-}
 
-if(aquariumFish is string)
+var preHistoricFishTwo = "Cockerellites";
+
+var result = preHistoricFishTwo switch
 {
-    Console.WriteLine("aquariumFish is a string");
-}
+    "Heliobatis" => "Heliobatis",
+    "Cockerellites" => "Cockerellites",
+    _ => "This is a default",
+};
+
+Console.WriteLine(result);
