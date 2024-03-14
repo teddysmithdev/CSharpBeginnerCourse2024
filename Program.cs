@@ -1,26 +1,14 @@
-﻿var preHistoricFish = "Cockerellites";
+﻿//Pinger
 
-switch (preHistoricFish) 
+using System.Net.NetworkInformation;
+
+Ping p1 = new Ping();
+PingReply PR = p1.Send("8.8.8.8");
+
+while (PR.Status.ToString() == "Success")
 {
-    case "Heliobatis":
-        Console.WriteLine("Heliobatis");
-        break;
-    case "Cockerellites":
-        Console.WriteLine("Cockerellites");
-        break;
-    default:
-        Console.WriteLine("This is a default");
-        break;
+    Console.WriteLine(PR.Status.ToString() + "!");
+    PR = p1.Send("8.8.8.8");
+    Console.WriteLine("Waiting ten seconds for next request");
+    Thread.Sleep(10000);
 }
-
-
-var preHistoricFishTwo = "Cockerellites";
-
-var result = preHistoricFishTwo switch
-{
-    "Heliobatis" => "Heliobatis",
-    "Cockerellites" => "Cockerellites",
-    _ => "This is a default",
-};
-
-Console.WriteLine(result);
