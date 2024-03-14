@@ -1,14 +1,32 @@
-﻿//Pinger
+﻿using ConsoleApp;
 
-using System.Net.NetworkInformation;
+//CRUD
 
-Ping p1 = new Ping();
-PingReply PR = p1.Send("8.8.8.8");
+Rat wolfRat = new Rat();
+Rat fancyRat = new Rat();
 
-while (PR.Status.ToString() == "Success")
-{
-    Console.WriteLine(PR.Status.ToString() + "!");
-    PR = p1.Send("8.8.8.8");
-    Console.WriteLine("Waiting ten seconds for next request");
-    Thread.Sleep(10000);
-}
+wolfRat.Name = "Wolf Rat";
+wolfRat.Number = 1000;
+wolfRat.IsRadioactive = false;
+
+fancyRat.Name = "Fancy Rat";
+fancyRat.Number = 500;
+fancyRat.IsRadioactive = false;
+
+//Read
+Console.WriteLine(wolfRat.Name);
+Console.WriteLine(fancyRat.Name);
+
+//Update
+wolfRat.Name = "WOLF RAT";
+fancyRat.Name = "FANCY RAT";
+
+Console.WriteLine(wolfRat.Name);
+Console.WriteLine(fancyRat.Name);
+
+//Delete
+wolfRat.Name = "";
+fancyRat.Name = "";
+
+Console.WriteLine(wolfRat.Name);
+Console.WriteLine(fancyRat.Name);
