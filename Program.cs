@@ -1,22 +1,14 @@
-﻿(string, int, string) values = ("t", 2, "p");
+﻿int? value = null;
 
-Console.WriteLine(values.Item1);
-Console.WriteLine(values.Item2);
-Console.WriteLine(values.Item3);
+string? value2 = "lll";
 
-var valuesWithName = (First: "t", Second: 2, Third: "p");
-
-Console.WriteLine(valuesWithName.First);
-
-(int a, string b, bool c) ReturnTheseValues()
+if (value2 is not null)
 {
-    return (9, "u", true);
+    Console.WriteLine(value2.Length);
 }
 
-(int a, string b, bool c) = ReturnTheseValues();
+Console.WriteLine(value2 ?? "No value!");
 
-Console.WriteLine(a);
-Console.WriteLine(b);
-Console.WriteLine(c);
+Console.WriteLine(value2 is not null ? "Has value!" : "No value");
 
 
