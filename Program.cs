@@ -1,18 +1,20 @@
-﻿Person person1 = new("Teddy", "Smith");
-Person person2 = new("Teddy", "Smith");
+﻿Action loggerAction = () =>
+{
+    System.Console.WriteLine("This is simple");
+};
 
-//Shallow Immutabiility
-//person1.LastName = "smith";
-//person1.PhoneNumbers[0] = "222-2222";
+Func<int, int> loggerFunc = (int x) =>
+{
+    return x + 2;
+};
 
-//Equality
-//Value - 1. Check the type 2. Check the contents
-//Referential - 2. By memory (hex code)
-Console.WriteLine(person1 == person2);
+var list = Enumerable.Range(1, 10).Select(i => i * 3).ToList();
 
-//Non-destructive Mutation (Copy)
-Person person3 = person2 with { LastName = "Brewski" };
-Console.WriteLine(person3.ToString());
+var callCall = (Action func) =>
+{
+    func();
+};
 
+callCall(loggerAction);
 
-public record Person(string FirstName, string LastName);
+public delegate int SuperCustom(int x);
